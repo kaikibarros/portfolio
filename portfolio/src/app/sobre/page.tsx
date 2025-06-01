@@ -11,6 +11,8 @@ const TecnologiasUtilizadas = [
 
 const SobrePage: React.FC = () => {
   return (
+    <>
+   
     <div className="container mx-auto p-4">
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-center">Sobre o Projeto</h1>
@@ -42,7 +44,7 @@ const SobrePage: React.FC = () => {
         </p>
       </section>
     </div>
-  );
+ </> );
 };
 
 export default SobrePage;

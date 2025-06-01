@@ -1,0 +1,99 @@
+/* src/components/Footer.module.css */
+
+.footerContainer {
+  background-color: #000000; /* Fundo preto como na imagem */
+  color: #ffffff;           /* Texto branco */
+  padding: 40px 50px;      /* Espaçamento interno (ajuste conforme gosto) */
+  font-family: Arial, sans-serif; /* Use a fonte do seu projeto */
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os itens ao topo das colunas */
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+}
+
+.infoColumn {
+  flex: 2; /* Permite que a coluna de info ocupe mais espaço */
+  min-width: 280px; /* Largura mínima antes de quebrar */
+  padding-right: 20px; /* Espaço para não colar na coluna social */
+}
+
+.infoName {
+  font-size: 1.8rem; /* Tamanho do nome */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.infoDescription {
+  font-size: 0.95rem; /* Tamanho da descrição */
+  line-height: 1.6;
+  color: #cccccc; /* Cor um pouco mais suave para a descrição */
+}
+
+.socialColumn {
+  flex: 1; /* Permite que a coluna social ocupe o espaço restante */
+  min-width: 200px;
+  text-align: left; /* Alinhamento do título "SOCIAL" e ícones */
+}
+
+/* Em telas maiores, pode querer alinhar à direita se preferir */
+/* @media (min-width: 768px) {
+  .socialColumn {
+    text-align: right;
+  }
+  .socialLinksContainer {
+    justify-content: flex-end;
+  }
+} */
+
+
+.socialTitle {
+  font-size: 1.5rem; /* Tamanho do título "SOCIAL" */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Como na imagem */
+}
+
+.socialLinksContainer {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.socialLink {
+  display: inline-block; /* Para que o link se comporte bem */
+}
+
+.socialIcon {
+  /* Se precisar de estilos específicos para os ícones, como transições */
+  transition: opacity 0.3s ease;
+}
+
+.socialLink:hover .socialIcon {
+  opacity: 0.7; /* Efeito de hover sutil nos ícones */
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #444444; /* Cor da linha separadora (sutil) */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bottomSection {
+  text-align: center; /* Centraliza o texto de copyright */
+  font-size: 0.875rem; /* Tamanho do texto de copyright */
+  color: #aaaaaa;       /* Cor mais suave para o copyright */
+}
+
+.copyrightLink {
+  color: #ffffff; /* Cor do link no copyright (branco) */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.copyrightLink:hover {
+  text-decoration: underline; /* Sublinhado no hover */
+}

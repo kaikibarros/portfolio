@@ -3,12 +3,18 @@ import React from 'react';
 
 const Formacoes = [
   {
-    curso: 'Sistemas para Internet',
-    instituicao: 'Nome da Instituição de Ensino',
-    periodo: 'Ano de Início - Ano de Conclusão (ou "Cursando")',
-    descricao: 'Principais disciplinas e projetos desenvolvidos durante o curso. Habilidades adquiridas.',
+    curso: 'Manutenção e Suporte em Informática',
+    instituicao: 'Escola Técnica Estadual Professor Agamemnom Magalhães (ETEPAM)',
+    periodo: '2020 - 2022)',
+    descricao: 'Manutenção de computadores, Introdução à Microinformática, Componentes Eletrônicos e Redes de computadores.',
   },
-  // Adicione outras formações ou cursos relevantes
+  {
+    curso: 'Sistemas para Internet',
+    instituicao: 'Universidade Católica de Pernambuco (UNICAP)',
+    periodo: '2024 - Cursando)',
+    descricao: 'Desenvolvimento Web, Diagramas UML,Aplicações com Node.js, Engenharia de Software e Design para Web.',
+  },
+   
 ];
 
 const ExperienciaAcademicaPage: React.FC = () => {
@@ -21,7 +27,7 @@ const ExperienciaAcademicaPage: React.FC = () => {
       <section className="space-y-6">
         {Formacoes.map((formacao, index) => (
           <div key={index} className="p-6 border rounded-lg shadow-md bg-white">
-            <h2 className="text-2xl font-semibold text-blue-600">{formacao.curso}</h2>
+            <h2 className="text-2xl font-semibold text--600">{formacao.curso}</h2>
             <p className="text-xl text-gray-700">{formacao.instituicao}</p>
             <p className="text-sm text-gray-500 mb-2">{formacao.periodo}</p>
             <p className="text-gray-600">{formacao.descricao}</p>

@@ -1,14 +1,14 @@
 .navbar {
-  background-color: #333;
+  background-color: #D5CEA3;
   padding: 1rem;
-  color: white;
+  color: #1A120B;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo a {
-  color: white;
+  color: #1A120B;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -23,7 +23,7 @@
 }
 
 .navLinks li a {
-  color: white;
+  color: #1A120B;
   text-decoration: none;
   transition: color 0.3s ease;
 }

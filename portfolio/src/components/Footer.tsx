@@ -1,59 +1,83 @@
 // src/components/Footer.tsx
 import Image from 'next/image';
+import Link from 'next/link'; // Certifique-se de importar o Link
 import React from 'react';
+import styles from './Footer.module.css'; // Usaremos este para o estilo principal
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear(); // Para obter o ano dinamicamente
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center p-4 text-center text-sm text-gray-600 border-t mt-8" > {/* Adicionei padding, text-center, text-sm, text-gray-600, border-t, mt-8 para um estilo base */}
-      <p>&copy; {currentYear} Kaiki Barros. All rights reserved.</p> {/* Adicionado o ano dinâmico e envolto em <p> */}
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/file.svg" // Certifique-se que este SVG está na pasta /public
-          alt="File icon"
-          width={16}
-          height={16}
-        />
-        Learn
-      </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/window.svg" // Certifique-se que este SVG está na pasta /public
-          alt="Window icon"
-          width={16}
-          height={16}
-        />
-        Examples
-      </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://github.com/kaikibarros" // Seu link do GitHub
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/github.png" // Certifique-se que este PNG (ou SVG) está na pasta /public e o nome está correto
-          alt="GitHub icon" // Alterado o alt text para ser mais descritivo
-          width={16}
-          height={16}
-        />
-        GitHub
-      </a>
-    </footer>
+    <div className={styles.footerContainer}> {/* Container principal do footer */}
+      <div className={styles.topSection}>   {/* Seção superior com infos e social */}
+        <div className={styles.infoColumn}>
+          <h1 className={styles.infoName}>Kaiki Barros</h1>
+          <p className={styles.infoDescription}>
+            Um desenvolvedor web focado em frontend que constrói o frontend de sites e aplicativos da web.
+          </p>
+        </div>
+        <div className={styles.socialColumn}>
+          <h2 className={styles.socialTitle}>SOCIAL</h2>
+          <div className={styles.socialLinksContainer}>
+            <a
+              href="https://www.linkedin.com/in/seu-perfil/" // SUBSTITUA PELO SEU LINKEDIN
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="LinkedIn"
+            >
+              <Image
+                src="/linkedin.png" // Ícone do LinkedIn na pasta /public
+                alt="LinkedIn"
+                width={24} // Ajuste o tamanho conforme necessário
+                height={24}
+                className={styles.socialIcon}
+              />
+            </a>
+            <a
+              href="mailto:kaikibarros2004@gmail.com" 
+              className={styles.socialLink}
+              aria-label="Email"
+            >
+              <Image
+                src="/gmail.png" // fazer troca do ico 
+                alt="Email"
+                width={24}
+                height={24}
+                className={styles.socialIcon}
+              />
+            </a>
+            <a
+              href="https://github.com/kaikibarros" // Seu link do GitHub
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="GitHub"
+            >
+              <Image
+                src="/github.png" 
+                alt="GitHub"
+                width={24}
+                height={24}
+                className={styles.socialIcon}
+              />
+            </a>
+            {/* Adicione mais links sociais aqui se desejar, seguindo o mesmo padrão */}
+          </div>
+        </div>
+      </div>
+
+      <hr className={styles.separator} /> {/* Linha separadora */}
+
+      <div className={styles.bottomSection}> {/* Seção inferior com copyright */}
+        <p>
+          &copy; Copyright {currentYear}. Made by{' '}
+          <Link href="/" className={styles.copyrightLink}> {/* Link para seu portfólio/home */}
+            Kaiki Barros
+          </Link>
+        </p>
+      </div>
+    </div>
   );
 };
 

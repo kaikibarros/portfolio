@@ -1,15 +1,14 @@
-// src/components/Footer.tsx
 import Image from 'next/image';
-import Link from 'next/link'; // Certifique-se de importar o Link
+import Link from 'next/link'; 
 import React from 'react';
-import styles from './Footer.module.css'; // Usaremos este para o estilo principal
+import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className={styles.footerContainer}> {/* Container principal do footer */}
-      <div className={styles.topSection}>   {/* Seção superior com infos e social */}
+    <div className={styles.footerContainer}>
+      <div className={styles.topSection}>   
         <div className={styles.infoColumn}>
           <h1 className={styles.infoName}>Kaiki Barros</h1>
           <p className={styles.infoDescription}>
@@ -20,16 +19,16 @@ const Footer: React.FC = () => {
           <h2 className={styles.socialTitle}>SOCIAL</h2>
           <div className={styles.socialLinksContainer}>
             <a
-              href="https://www.linkedin.com/in/seu-perfil/" // SUBSTITUA PELO SEU LINKEDIN
+              href="https://www.linkedin.com/in/seu-perfil/" 
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
               aria-label="LinkedIn"
             >
               <Image
-                src="/linkedin.png" // Ícone do LinkedIn na pasta /public
+                src="/linkedin.png" 
                 alt="LinkedIn"
-                width={24} // Ajuste o tamanho conforme necessário
+                width={24} 
                 height={24}
                 className={styles.socialIcon}
               />
@@ -48,7 +47,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="https://github.com/kaikibarros" // Seu link do GitHub
+              href="https://github.com/kaikibarros" 
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
@@ -62,17 +61,16 @@ const Footer: React.FC = () => {
                 className={styles.socialIcon}
               />
             </a>
-            {/* Adicione mais links sociais aqui se desejar, seguindo o mesmo padrão */}
           </div>
         </div>
       </div>
 
-      <hr className={styles.separator} /> {/* Linha separadora */}
+      <hr className={styles.separator} /> 
 
-      <div className={styles.bottomSection}> {/* Seção inferior com copyright */}
+      <div className={styles.bottomSection}> 
         <p>
           &copy; Copyright {currentYear}. Made by{' '}
-          <Link href="/" className={styles.copyrightLink}> {/* Link para seu portfólio/home */}
+          <Link href="/" className={styles.copyrightLink}> 
             Kaiki Barros
           </Link>
         </p>

@@ -57,7 +57,6 @@ const SobrePage: React.FC = () => {
           <section className={styles.objetivo}>
             <h2 className="text-4xl font-semibold mb-4">Objetivo do Projeto</h2>
             <p className="text-2xl">
-              {/* Descreva aqui o objetivo principal do seu portfólio/aplicação */}
               Este portfólio digital foi criado com o intuito de apresentar
               minhas habilidades, projetos e experiências na área de
               desenvolvimento de software, servindo como uma plataforma

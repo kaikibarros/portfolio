@@ -1,6 +1,5 @@
-// src/components/GitHubReposList.tsx
 import React from 'react';
-import { GitHubRepo } from '../types'; // Ajuste o caminho
+import { GitHubRepo } from '../types'; 
 import GitHubRepoCard from './GitHubRepoCard';
 
 interface GitHubReposListProps {
@@ -9,18 +8,15 @@ interface GitHubReposListProps {
 
 async function fetchGitHubRepos(username: string): Promise<GitHubRepo[] | null> {
   try {
-    // Ordena por último push (mais recentes primeiro), pega até 100 (máximo por página sem paginação complexa)
-    // Você pode adicionar &per_page=X para limitar a quantidade
+   
     const response = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&direction=desc&per_page=9`, {
-      // cache: 'no-store', // Descomente para sempre buscar dados frescos (bom para dev)
+      
       next: { revalidate: 3600 } // Revalida os dados a cada 1 hora (3600 segundos)
-                                  // Ajuste conforme sua necessidade de atualização
     });
 
     if (!response.ok) {
       console.error(`Failed to fetch repos for ${username}: ${response.status} ${response.statusText}`);
-      // Em um cenário real, você poderia logar isso em um sistema de monitoramento
-      // e talvez retornar um objeto de erro mais estruturado.
+      
       const errorBody = await response.text();
       console.error("Error body:", errorBody);
       return null;
@@ -55,8 +51,7 @@ const GitHubReposList: React.FC<GitHubReposListProps> = async ({ username }) => 
 
   return (
     <section className="py-8">
-      {/* O título da seção pode vir da página que usa este componente */}
-      {/* <h2 className="text-3xl font-bold text-center mb-10 text-[var(--section-foreground)]">Meus Projetos no GitHub</h2> */}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {repos.map((repo) => (
           <GitHubRepoCard key={repo.id} repo={repo} />

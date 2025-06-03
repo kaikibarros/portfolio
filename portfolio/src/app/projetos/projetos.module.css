@@ -7,9 +7,12 @@
  box-shadow: 90%;
  text-decoration: underline;
 }
-
 .container section{
-  padding: 5rem;
+  padding: 2rem;
   background-color: #131010;
   border-radius: 2%;
+}
+.container h1 {
+  color: #F0BB78;
+  font-size: 40px;
 }

@@ -30,8 +30,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} flex flex-col min-h-screen ${geistMono.variable} antialiased`}
       >
-         <Navbar /> {/* 2. Adicione a Navbar aqui */}
-           <main className="flex-grow">{/* Adicionado flex-grow para empurrar o footer para baixo */}
+         <Navbar /> 
+           <main className="flex-grow">
           {children}
         </main>
          <Footer/>

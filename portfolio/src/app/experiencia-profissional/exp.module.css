@@ -1,14 +1,87 @@
-.container h1 {
- background-color: #131010;
- border-radius: 10px; ;
- padding: 20px;
-  margin-left: 300px;
-  margin-right: 300px;
- box-shadow: 90%;
- text-decoration: underline;
+/* src/app/experiencia-profissional/exp.module.css */
+
+.pageContainer {
+  background-color: var(--background, #E5E5CB);
+  color: var(--foreground, #1A120B);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  font-family: var(--font-lato, sans-serif);
 }
-.container section{
-  padding: 5rem;
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #F0BB78;
   background-color: #131010;
-  border-radius: 2%;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.contentSection {
+  background-color: #131010;
+  color: #E0E0E0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.experienceCard {
+  margin-bottom: 2.5rem;
+}
+.experienceCard:last-child {
+  margin-bottom: 0;
+}
+
+.jobTitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--accent-purple, #F0BB78);
+  margin-bottom: 0.5rem;
+}
+
+.companyText {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #CCCCCC;
+  margin-bottom: 0.25rem;
+}
+
+.periodText {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #A0A0A0;
+  margin-bottom: 1.25rem;
+}
+
+.responsibilitiesLabel {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: #D0D0D0;
+  margin-bottom: 0.6rem;
+}
+
+.responsibilitiesList {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #B0B0B0;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.responsibilitiesList li {
+  margin-bottom: 0.4rem;
 }

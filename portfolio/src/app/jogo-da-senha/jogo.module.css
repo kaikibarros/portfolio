@@ -1,54 +1,52 @@
-/* jogo.module.css */
 
-/* Container principal da página do jogo */
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo principal da página */
+  align-items: center; 
   min-height: 100vh;
   padding: 20px;
-  background-color: #F0BB78; /* Tom de bege/areia claro para o fundo da página (ajuste conforme seu gosto) */
+  background-color: #F0BB78; 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte padrão do sistema */
 }
 
-/* Estilo para o cabeçalho principal "Jogo da Senha" (o box preto) */
+
 .titleBox {
-  background-color: #1A1A1A; /* Quase preto */
+  background-color: #1A1A1A; 
   color: #FFFFFF;
   padding: 15px 40px;
   border-radius: 8px;
-  margin-bottom: 10px; /* Espaço abaixo do título principal */
+  margin-bottom: 10px; 
   text-align: center;
-  border: 3px solid #FFFFFF; /* Borda branca grossa como na imagem */
+  border: 3px solid #FFFFFF; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.titleBox h1 { /* Estilizando o h1 dentro do .titleBox */
+.titleBox h1 {
   margin: 0;
-  font-size: 2.2rem; /* Ajuste conforme necessário */
+  font-size: 2.2rem; 
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.titleBox p { /* Estilizando o p (subtítulo) dentro do .titleBox, se houver, ou o p abaixo dele */
+.titleBox p { 
   margin-top: 5px;
   font-size: 0.9rem;
-  color: #cccccc; /* Se o subtítulo estiver dentro do box */
+  color: #cccccc; 
 }
 
-/* Estilo para o parágrafo de subtítulo fora do box preto */
+
 .subtitle {
-  color: #4A3F35; /* Cor de texto escura para o subtítulo no fundo bege */
+  color: #4A3F35; 
   font-size: 1rem;
-  margin-bottom: 25px; /* Espaço antes do formulário do jogo */
+  margin-bottom: 25px; 
   text-align: center;
 }
 
 
-/* Container principal do formulário do jogo */
+
 .form {
-  background-color: #2C2C2C; /* Fundo escuro para o formulário (um cinza bem escuro) */
-  color: #EAEAEA; /* Texto claro para contraste */
+  background-color: #2C2C2C; 
+  color: #EAEAEA; 
   padding: 30px 35px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -57,22 +55,22 @@
   text-align: center;
 }
 
-.form form { /* O elemento <form> dentro do div .form */
+.form form { 
   display: flex;
   flex-direction: column;
-  gap: 18px; /* Espaço entre input e botão de submit */
+  gap: 18px; 
 }
 
 /* Estilo para o input de tentativa */
 .form input[type="text"] {
-  background-color: #1E1E1E; /* Fundo mais escuro para o input */
+  background-color: #1E1E1E; 
   color: #EAEAEA;
-  border: 1px solid #505050; /* Borda sutil */
+  border: 1px solid #505050; 
   border-radius: 8px;
   padding: 14px 18px;
-  font-size: 1.2rem; /* Tamanho da fonte maior */
+  font-size: 1.2rem; 
   text-align: center;
-  letter-spacing: 0.2em; /* Para os dígitos ficarem bem espaçados */
+  letter-spacing: 0.2em; 
   width: 100%;
   box-sizing: border-box;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -80,17 +78,17 @@
 
 .form input[type="text"]::placeholder {
   color: #888888;
-  letter-spacing: normal; /* Placeholder com espaçamento normal */
+  letter-spacing: normal; 
 }
 
 .form input[type="text"]:focus {
   outline: none;
-  border-color: #00A9E0; /* Azul ciano para foco (ajuste a cor) */
+  border-color: #00A9E0; 
   box-shadow: 0 0 0 3px rgba(0, 169, 224, 0.25);
 }
 
-/* Estilo base para botões dentro do formulário */
-.form button { /* Aplicado a todos os botões dentro de .form */
+
+.form button { 
   width: 100%;
   padding: 14px 20px;
   font-size: 1rem;
@@ -119,39 +117,38 @@
   box-shadow: none;
 }
 
-/* Botão de Enviar Tentativa (azul) - você pode criar uma classe específica ou usar seletor de atributo */
-/* Para usar com `className={styles.submitButton}`: */
+
 .submitButton {
-  background-color: #2563EB; /* Azul (Tailwind blue-600) */
+  background-color: #2563EB; 
   color: white;
 }
 .submitButton:hover:not(:disabled) {
-  background-color: #1D4ED8; /* Azul mais escuro (Tailwind blue-700) */
+  background-color: #1D4ED8; 
 }
 
-/* Botão Revelar Senha (amarelo/dourado) */
+
 .revealButton {
-  background-color: #F59E0B; /* Âmbar (Tailwind amber-500) */
-  color: #1A120B; /* Texto escuro para contraste */
-  margin-top: 12px; /* Ajuste de margem */
+  background-color: #F59E0B; 
+  color: #1A120B; 
+  margin-top: 12px; 
   margin-bottom: 20px;
 }
 .revealButton:hover:not(:disabled) {
-  background-color: #D97706; /* Âmbar mais escuro (Tailwind amber-600) */
+  background-color: #D97706; 
 }
 
-/* Botão Novo Jogo (verde) */
+
 .newGameButton {
-  background-color: #059669; /* Verde (Tailwind green-600) */
+  background-color: #059669; 
   color: white;
   margin-top: 12px;
 }
 .newGameButton:hover:not(:disabled) {
-  background-color: #047857; /* Verde mais escuro (Tailwind green-700) */
+  background-color: #047857; 
 }
 
-/* Área de mensagens (instruções, feedback) */
-.messageText { /* Use esta classe para o <p> que exibe a 'message' do state */
+
+.messageText { 
   text-align: center;
   margin-bottom: 18px; /* Aumentei um pouco a margem */
   font-weight: 500;

@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "./Navbar.module.css"; 
 
 const Navbar: React.FC = () => {
-  // Adicionando o tipo React.FC (Functional Component)
+
   return (
-    <nav className={styles.navbar}> {/* Opcional: classe do CSS Module */}
+    <nav className={styles.navbar}> 
       <div className={styles.logo}>
         <Link href="/">
           Kaiki Barros
@@ -12,35 +12,31 @@ const Navbar: React.FC = () => {
       </div>
       <ul className={styles.navLinks}>
         <li>
-          <Link href="/"> {/* Corrigido: link para a página inicial */}
+          <Link href="/">
             Home
           </Link>
         </li>
         <li>
-          <Link href="/sobre"> {/* Corrigido */}
+          <Link href="/sobre"> 
             Sobre
           </Link>
         </li>
         <li>
-          <Link href="/experiencia-academica"> {/* Corrigido */}
+          <Link href="/experiencia-academica"> 
             Experiência Acadêmica
           </Link>
         </li>
         <li>
-          <Link href="/experiencia-profissional"> {/* Corrigido */}
+          <Link href="/experiencia-profissional"> 
             Experiência Profissional
           </Link>
         </li>
         <li>
-          <Link href="/projetos"> {/* Corrigido */}
+          <Link href="/projetos">
             Projetos Desenvolvidos
           </Link>
         </li>
         <li>
-          {/* Ajuste este link conforme o nome da pasta do seu jogo.
-              Se a pasta for 'jogo-da-senha', use '/jogo-da-senha'.
-              Se a pasta for 'jogo', use '/jogo'.
-          */}
           <Link href="/jogo-da-senha">
           Jogo
           </Link>

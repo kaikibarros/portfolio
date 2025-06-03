@@ -1,6 +1,4 @@
-// src/components/QuoteDisplay.tsx
-
-// Interface para definir a estrutura esperada da resposta da API
+//Isso fé uma API que me fornece uma citação aleatória, mas ainda não está funcionando.
 interface QuoteData {
   _id: string;
   content: string;
@@ -27,7 +25,7 @@ async function getQuote(): Promise<QuoteData | null> {
     return data;
   } catch (error) {
     console.error("Error fetching quote:", error);
-    return null; // Retorna null em caso de erro na requisição
+    return null; 
   }
 }
 
@@ -42,7 +40,6 @@ export default async function QuoteDisplay() {
 
   return (
     <div className="my-8 p-6 bg-[var(--section-background)] text-[var(--section-foreground)] rounded-lg shadow-lg max-w-2xl mx-auto text-center">
-      {/* Usando as variáveis de cor que você já tem ou classes Tailwind */}
       <blockquote className="text-xl md:text-2xl italic mb-4">
         {quote.content}
       </blockquote>

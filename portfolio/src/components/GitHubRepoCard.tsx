@@ -1,7 +1,7 @@
 // src/components/GitHubRepoCard.tsx
 import React from 'react';
-import { GitHubRepo } from '../types'; // Ajuste o caminho se 'types' estiver em outro lugar
-// Se não tiver o alias @, use o caminho relativo: import { GitHubRepo } from '../types/github';
+import { GitHubRepo } from '../types'; 
+
 
 interface GitHubRepoCardProps {
   repo: GitHubRepo;

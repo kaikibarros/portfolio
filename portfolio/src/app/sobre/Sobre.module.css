@@ -1,0 +1,23 @@
+
+
+.sobre h1 {
+ background-color: #131010;
+ border-radius: 10px; ;
+ padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+ box-shadow: 90%;
+ text-decoration: underline;
+}
+
+.container section{
+  padding: 5rem;
+  background-color: #131010;
+  border-radius: 2%;
+}
+
+.objetivo{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+}

@@ -1,14 +1,15 @@
 .navbar {
-  background-color: #D5CEA3;
+  background-color: #FFF0DC;
   padding: 1rem;
-  color: #1A120B;
+  color: #FFF0DC;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 50%;
 }
 
 .logo a {
-  color: #1A120B;
+  color: #000;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -17,17 +18,22 @@
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 1rem; /* Espaçamento entre os links */
+  gap: 2rem; /* Espaçamento entre os links */
   padding: 0;
   margin: 0;
+
 }
 
 .navLinks li a {
-  color: #1A120B;
+  margin-right: 1.5rem;
+  color: #131010;
+  padding:8px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .navLinks li a:hover {
-  color: #ddd;
+  color: #FFF0DC;
+    background-color: #1A120B;
+    border-radius: 10%;
 }

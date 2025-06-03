@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./Navbar.module.css"; // Opcional: para CSS Modules
+import styles from "./Navbar.module.css"; 
 
 const Navbar: React.FC = () => {
   // Adicionando o tipo React.FC (Functional Component)

@@ -1,0 +1,252 @@
+/* jogo.module.css */
+
+/* Container principal da página do jogo */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo principal da página */
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #F0BB78; /* Tom de bege/areia claro para o fundo da página (ajuste conforme seu gosto) */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte padrão do sistema */
+}
+
+/* Estilo para o cabeçalho principal "Jogo da Senha" (o box preto) */
+.titleBox {
+  background-color: #1A1A1A; /* Quase preto */
+  color: #FFFFFF;
+  padding: 15px 40px;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Espaço abaixo do título principal */
+  text-align: center;
+  border: 3px solid #FFFFFF; /* Borda branca grossa como na imagem */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.titleBox h1 { /* Estilizando o h1 dentro do .titleBox */
+  margin: 0;
+  font-size: 2.2rem; /* Ajuste conforme necessário */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.titleBox p { /* Estilizando o p (subtítulo) dentro do .titleBox, se houver, ou o p abaixo dele */
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #cccccc; /* Se o subtítulo estiver dentro do box */
+}
+
+/* Estilo para o parágrafo de subtítulo fora do box preto */
+.subtitle {
+  color: #4A3F35; /* Cor de texto escura para o subtítulo no fundo bege */
+  font-size: 1rem;
+  margin-bottom: 25px; /* Espaço antes do formulário do jogo */
+  text-align: center;
+}
+
+
+/* Container principal do formulário do jogo */
+.form {
+  background-color: #2C2C2C; /* Fundo escuro para o formulário (um cinza bem escuro) */
+  color: #EAEAEA; /* Texto claro para contraste */
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px; /* Largura máxima para o formulário */
+  text-align: center;
+}
+
+.form form { /* O elemento <form> dentro do div .form */
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Espaço entre input e botão de submit */
+}
+
+/* Estilo para o input de tentativa */
+.form input[type="text"] {
+  background-color: #1E1E1E; /* Fundo mais escuro para o input */
+  color: #EAEAEA;
+  border: 1px solid #505050; /* Borda sutil */
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 1.2rem; /* Tamanho da fonte maior */
+  text-align: center;
+  letter-spacing: 0.2em; /* Para os dígitos ficarem bem espaçados */
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input[type="text"]::placeholder {
+  color: #888888;
+  letter-spacing: normal; /* Placeholder com espaçamento normal */
+}
+
+.form input[type="text"]:focus {
+  outline: none;
+  border-color: #00A9E0; /* Azul ciano para foco (ajuste a cor) */
+  box-shadow: 0 0 0 3px rgba(0, 169, 224, 0.25);
+}
+
+/* Estilo base para botões dentro do formulário */
+.form button { /* Aplicado a todos os botões dentro de .form */
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.form button:hover:not(:disabled) {
+  opacity: 0.85;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+.form button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Botão de Enviar Tentativa (azul) - você pode criar uma classe específica ou usar seletor de atributo */
+/* Para usar com `className={styles.submitButton}`: */
+.submitButton {
+  background-color: #2563EB; /* Azul (Tailwind blue-600) */
+  color: white;
+}
+.submitButton:hover:not(:disabled) {
+  background-color: #1D4ED8; /* Azul mais escuro (Tailwind blue-700) */
+}
+
+/* Botão Revelar Senha (amarelo/dourado) */
+.revealButton {
+  background-color: #F59E0B; /* Âmbar (Tailwind amber-500) */
+  color: #1A120B; /* Texto escuro para contraste */
+  margin-top: 12px; /* Ajuste de margem */
+  margin-bottom: 20px;
+}
+.revealButton:hover:not(:disabled) {
+  background-color: #D97706; /* Âmbar mais escuro (Tailwind amber-600) */
+}
+
+/* Botão Novo Jogo (verde) */
+.newGameButton {
+  background-color: #059669; /* Verde (Tailwind green-600) */
+  color: white;
+  margin-top: 12px;
+}
+.newGameButton:hover:not(:disabled) {
+  background-color: #047857; /* Verde mais escuro (Tailwind green-700) */
+}
+
+/* Área de mensagens (instruções, feedback) */
+.messageText { /* Use esta classe para o <p> que exibe a 'message' do state */
+  text-align: center;
+  margin-bottom: 18px; /* Aumentei um pouco a margem */
+  font-weight: 500;
+  min-height: 1.5em;
+  font-size: 0.9rem;
+  color: #B0B0B0; /* Cor base para mensagens informativas */
+}
+/* As cores de sucesso/erro são aplicadas dinamicamente no TSX, o que é bom. */
+
+
+/* Seção de Tentativas Anteriores */
+.attemptsSection { /* Use esta classe para o div que envolve o título e a lista de tentativas */
+  margin-top: 30px;
+  text-align: left;
+}
+
+.attemptsTitle { /* Use esta classe para o <h3> "Tentativas Anteriores:" */
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #D0D0D0; /* Cor do título um pouco mais clara */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.noAttemptsText { /* Use esta classe para o <p> "Nenhuma tentativa ainda." */
+  text-align: center;
+  color: #888888;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.attemptsList { /* Use esta classe para a <ul> */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid #4A4A4A;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #222831; /* Mesmo fundo do .form ou um pouco diferente */
+}
+
+.attemptItem { /* Use esta classe para cada <li> */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #393E46; /* Fundo para cada item, igual ao input */
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: #EAEAEA;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.attemptItem:last-child {
+  margin-bottom: 0;
+}
+
+.attemptGuess { /* Use esta classe para o <span> da tentativa */
+  font-size: 1.1rem;
+  font-family: 'Consolas', 'Menlo', 'Courier New', monospace; /* Fonte monoespaçada */
+  letter-spacing: 0.1em;
+  color: #FFFFFF; /* Destaca o palpite */
+}
+
+.attemptResult { /* Use esta classe para o <span> do resultado Bulls/Cows */
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.bulls { /* Use esta classe para o <span> dos Bulls */
+  color: #FFCA28; /* Amarelo vibrante para Bulls */
+  font-weight: bold;
+}
+
+.cows { /* Use esta classe para o <span> dos Cows */
+  color: #26C6DA; /* Ciano/Azul claro para Cows */
+  font-weight: bold;
+}
+
+/* Scrollbar customizada para a lista de tentativas (opcional, visual) */
+.attemptsList::-webkit-scrollbar {
+  width: 8px;
+}
+.attemptsList::-webkit-scrollbar-track {
+  background: #2D3748; /* Cor da trilha da scrollbar */
+  border-radius: 10px;
+}
+.attemptsList::-webkit-scrollbar-thumb {
+  background-color: #555B66; /* Cor do "polegar" da scrollbar */
+  border-radius: 10px;
+  border: 2px solid #2D3748; /* Cria um espaçamento ao redor do polegar */
+}
+.attemptsList::-webkit-scrollbar-thumb:hover {
+  background-color: #6A737D;
+}

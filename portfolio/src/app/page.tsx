@@ -1,5 +1,6 @@
 // src/app/page.tsx
 // import Image from "next/image"; // Descomente se usar o componente Image do Next.js para ícones, etc.
+import QuoteDisplay from "@/components/QuoteDisplay";
 
 export default function Home() {
   const skills = [
@@ -25,7 +26,7 @@ export default function Home() {
               Aqui você encontrará mais informações sobre mim, o que faço, e minhas habilidades atuais principalmente em termos de programação e tecnologia.
             </p>
           </section>
-
+             <QuoteDisplay />
           {/* CONTEÚDO PRINCIPAL - DUAS COLUNAS */}
           <section className="bg-[var(--section-background)] text-[var(--section-foreground)] p-6 sm:p-8 rounded-lg shadow-lg">
             <div className="grid md:grid-cols-3 gap-10 md:gap-12">

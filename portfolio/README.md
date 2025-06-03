@@ -37,3 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb
+https://colorhunt.co/palette/fff0dcf0bb78543a14131010
